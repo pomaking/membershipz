@@ -1,12 +1,12 @@
-Router.route("/membership-individual", {
-	name: "individualMembership",
+Router.route("/membership-household", {
+	name: "householdMembership",
 	controller: ShopController
 });
-Router.route("/membership-business", {
-	name: "businessMembership",
+Router.route("/membership-school", {
+	name: "schoolMembership",
 	controller: ShopController
 });
-Router.route("/membership-family", {
-	name: "familyMembership",
+Router.route("/membership-company", {
+	name: "companyMembership",
 	controller: ShopController
 });
