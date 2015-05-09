@@ -11,13 +11,15 @@ CTemp.getMembershipInformation = function(productId){
 	var prod = Products.findOne({_id: productId});
 	switch(prod.title){
 		case "Individual Membership" :
-			Router.go("individualMembership");
-			break;
 		case "Family Membership" :
-			Router.go("familyMembership");
+			Router.go("householdMembership");
+			break;
+		case "Faculty Membership" :
+		case "Staff Membership" :
+			Router.go("schoolMembership");
 			break;
 		case "Business Membership" :
-			Router.go("businessMembership");
+			Router.go("companyMembership");
 			break;
 	}
 	//Cart.findOne({}).items

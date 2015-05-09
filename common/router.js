@@ -10,3 +10,7 @@ Router.route("/membership-company", {
 	name: "companyMembership",
 	controller: ShopController
 });
+Router.route("/address-temp", {
+	name: "addressTemp",
+	controller: ShopController
+})
