@@ -4,16 +4,19 @@ Template.schoolMembership.helpers({
 			name: {
 				type: String,
 				label: "School name"
-			},
-			forSomeoneElse: {
-				type: Boolean,
-				label: "Is this for someone else?"
-			},
-			forSomeoneElseEmail: {
-				type: String,
-				label: "What is their email?",
-				optional: true
 			}
 		});
+	}
+})
+
+AutoForm.hooks({
+	newSchoolMembership: {
+		onSubmit: function(insertDoc, updateDoc, currentDoc){
+			console.log(insertDoc);
+			/*Meteor.neo4j.call('insertNeoUser', insertDoc, function(err, doc){
+				console.log(err, doc);
+			});*/
+			return false;
+		}
 	}
 })

@@ -1,15 +1,6 @@
 Template.householdMembership.helpers({
 	householdSchema: function(){
 		return new SimpleSchema({
-			forSomeoneElse: {
-				type: Boolean,
-				label: "Is this for someone else?"
-			},
-			forSomeoneElseEmail: {
-				type: String,
-				label: "What is their email?",
-				optional: true
-			},
 			peopleInHousehold: {
 				type: [Object],
 				label: "People in your household"
@@ -26,6 +17,10 @@ Template.householdMembership.helpers({
 				type: String,
 				label: "Last Name"
 			},
+			"peopleInHousehold.$.isOver13": {
+				type: Boolean,
+				label: "Is this person over the age of 13?"
+			}
 		})
 	}
 });

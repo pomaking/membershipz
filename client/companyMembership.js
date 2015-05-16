@@ -4,18 +4,21 @@ Template.companyMembership.helpers({
 	}
 })
 
+AutoForm.hooks({
+	newCompanyMembership: {
+		onSubmit: function(insertDoc, updateDoc, currentDoc){
+			insertDoc.userId = Meteor.userId();
+			/*console.log(insertDoc);
+			console.log(Meteor.userId())*/
+			/*Meteor.neo4j.call('insertNeoUser', {userId: Meteor.userId()});*/
+			return false;
+		}
+	}
+})
+
 CompanySchema = new SimpleSchema({
 	name: {
 		type: String,
-		label: "Company"
-	},
-	forSomeoneElse: {
-		type: Boolean,
-		label: "Is this for someone else?"
-	},
-	forSomeoneElseEmail: {
-		type: String,
-		label: "What is their email?",
-		optional: true
+		label: "Company Name"
 	}
 });

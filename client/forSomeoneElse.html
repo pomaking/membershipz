@@ -1,0 +1,9 @@
+<template name="forSomeoneElse">
+{{#autoForm schema=forSomeoneElse id="isForSomeoneElse"}}
+{{> afQuickField name="forSomeoneElse"}}
+{{#if afFieldValueIs name="forSomeoneElse" value="true"}}
+	{{> afQuickField name="email"}}
+{{/if}}
+<button type="submit">Submit</button>
+{{/autoForm}}
+</template>
