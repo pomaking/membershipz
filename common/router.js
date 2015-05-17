@@ -20,4 +20,20 @@ Router.route("/address-temp", {
 Router.route("/for-someone-else", {
 	name: "forSomeoneElse",
 	controller: ShopController
-})
+});
+
+Router.route("/membership-invitation/:_id", {
+	name: "membershipInvitation",
+	controller: ShopController,
+	waitOn: function(){
+		return Meteor.subscribe("invitation", this.params._id);
+	},
+	data: function(){
+		var self = this;
+		return {
+			invitation: function() {
+				return Invitations.find({_id: self.params._id});
+			}
+		}
+	}
+});

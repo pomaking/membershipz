@@ -23,9 +23,10 @@ Package.on_use(function (api, where) {
   api.addFiles("client/schoolMembership.html", ["client"]);
   api.addFiles("client/schoolMembership.js", ["client"]);
   api.addFiles("common/router.js",["client","server"]); // common routing
+  api.addFiles("common/invitations.js", ["client", "server"])
+  api.addFiles("server/publications.js", ["server"]);
   /*api.addFiles("server/methods.js",["server"]); // register as a reaction package
   api.addFiles("server/publications.js",["server"]);
-  
   api.addFiles("common/contactSchema.js",["client","server"]);
   api.addFiles("common/householdSchema.js", ["client","server"]);
   api.addFiles("common/addressNode.js", ["client", "server"]);
