@@ -14,3 +14,10 @@ Router.route("/address-temp", {
 	name: "addressTemp",
 	controller: ShopController
 })
+
+//temp send email have them register automatically giving them
+//one of these membership pages to fill out
+Router.route("/for-someone-else", {
+	name: "forSomeoneElse",
+	controller: ShopController
+})

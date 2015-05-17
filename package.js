@@ -14,6 +14,8 @@ Package.on_use(function (api, where) {
   api.use("reactioncommerce:core");
   api.use("matb33:collection-hooks");
   api.addFiles("client/cartHooks.js", ["client"])
+  api.addFiles("client/forSomeoneElse.html", ["client"])
+  api.addFiles("client/forSomeoneElse.js", ["client"])
   api.addFiles("client/householdMembership.html", ["client"]);
   api.addFiles("client/householdMembership.js", ["client"]);
   api.addFiles("client/companyMembership.html", ["client"]);

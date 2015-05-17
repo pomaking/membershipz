@@ -1,7 +1,3 @@
-Template.forSomeoneElse.helpers({
-	forSomeoneElse: forSomeoneElseSchema
-})
-
 ForSomeoneElseSchema = new SimpleSchema({
 	isForSomeoneElse: {
 		type: Boolean,
@@ -11,4 +7,8 @@ ForSomeoneElseSchema = new SimpleSchema({
 		type: String,
 		label: "Email"
 	}
+})
+
+Template.forSomeoneElse.helpers({
+	forSomeoneElse: ForSomeoneElseSchema
 })
